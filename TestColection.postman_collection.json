@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "e95c066c-ab6c-44b5-95f8-a720871d2f08",
+		"name": "TestColection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34130114"
+	},
+	"item": [
+		{
+			"name": "GetAllWeatherSummaries",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}/WeatherForecast"
+			},
+			"response": []
+		},
+		{
+			"name": "GetWeatherSummarieByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}/WeatherForecast/Chilly"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateWeather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2024-08-12T17:26:02.064Z\",\r\n  \"temperature\": 0,\r\n  \"summary\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}/WeatherForecast"
+			},
+			"response": []
+		}
+	]
+}
