@@ -10,7 +10,8 @@
 			"name": "GetWeatherForecast",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://localhost:7116/WeatherForecast"
 			},
 			"response": []
 		},
@@ -18,39 +19,71 @@
 			"name": "GetWeatherForecastByName",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://localhost:7116/WeatherForecast/Hot"
 			},
 			"response": []
 		},
 		{
 			"name": "CreateWeatherForecast",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2024-08-15T12:14:10.6959761+03:00\",\r\n    \"temperature\": 21,\r\n    \"temperatureF\": 89,\r\n    \"summary\": \"not clear\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7116/WeatherForecast"
 			},
 			"response": []
 		},
 		{
 			"name": "MultipleCreation",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"date\": \"2024-08-15T12:14:10.6959761+03:00\",\r\n    \"temperature\": 25,\r\n    \"temperatureF\": 76,\r\n    \"summary\": \"ok\"\r\n},\r\n{\r\n    \"date\": \"2024-06-15T12:14:10.6959761+03:00\",\r\n    \"temperature\": 25,\r\n    \"temperatureF\": 76,\r\n    \"summary\": \"ok1\"\r\n},\r\n{\r\n    \"date\": \"2024-08-15T12:14:10.6959761+03:00\",\r\n    \"temperature\": 25,\r\n    \"temperatureF\": 76,\r\n    \"summary\": \"ok3\"\r\n}\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7116/WeatherForecast/Multiple"
 			},
 			"response": []
 		},
 		{
 			"name": "DeleteWeatherForecastByName",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": "https://localhost:7116/WeatherForecast/Hot"
 			},
 			"response": []
 		},
 		{
 			"name": "UpdateWeatherForecastByName",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2024-08-15T12:14:10.6959761+03:00\",\r\n    \"temperature\": 65,\r\n    \"temperatureF\": 212,\r\n    \"summary\": \"ok3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7116/WeatherForecast"
 			},
 			"response": []
 		}
