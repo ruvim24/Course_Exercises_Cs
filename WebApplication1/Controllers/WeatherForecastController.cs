@@ -20,6 +20,23 @@ namespace WebApplication1.Controllers
         {
             return Summaries.GetAll();
         }
+        [HttpGet("{index}, {PageSize}")]
+        public IActionResult GetPage(int index, int pageSize )
+        {
+            var pageList = Summaries.Summaries.OrderBy(x => x.Temperature)
+                .Skip((index-1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+            var page = new Paginator<WeatherForecast>()
+            {
+                list = pageList,
+                index = index,
+                pageSize = pageSize,
+                totalCount = Summaries.Summaries.Count()
+            };
+            return Ok(page);
+
+        }
 
         [HttpGet("{summary}", Name = "GetWeatherForecastByName")]
         public IActionResult GetpByName(string summary)

@@ -5,8 +5,7 @@ namespace WebApplication1.Repository
 {
     public class SummariesRepozitory : IRepozitory<WeatherForecast>
     {
-
-        private static List<WeatherForecast> Summaries = new List<WeatherForecast>
+        public List<WeatherForecast> Summaries { get; set; } = new()
         {
             new WeatherForecast { Date = DateTime.Now.AddDays(1), Temperature = 25, Summary = "Hot" },
             new WeatherForecast { Date = DateTime.Now.AddDays(2), Temperature = 15, Summary = "Cold" },
@@ -14,6 +13,10 @@ namespace WebApplication1.Repository
             new WeatherForecast { Date = DateTime.Now.AddDays(4), Temperature = 30, Summary = "Very Hot" },
             new WeatherForecast { Date = DateTime.Now.AddDays(5), Temperature = 10, Summary = "Very Cold" }
         };
+
+        
+
+        
 
 
         //va trebui ulterior de adaugt logica aditionala pentru verificarea 
