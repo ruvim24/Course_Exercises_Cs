@@ -1,4 +1,4 @@
-using WebApplication1.Models;
+using WebApplication1.Data.Models;
 using WebApplication1.Repository;
 
 var builder = WebApplication.CreateBuilder(args);

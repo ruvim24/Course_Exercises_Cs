@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
-using WebApplication1.Models;
+using WebApplication1.Data.Models;
 
 namespace WebApplication1.Repository
 {

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
+using WebApplication1.Data.Models;
 using WebApplication1.Repository;
 
 namespace WebApplication1.Controllers
@@ -27,7 +27,7 @@ namespace WebApplication1.Controllers
                 .Skip((index-1) * pageSize)
                 .Take(pageSize)
                 .ToList();
-            var page = new Paginator<WeatherForecast>()
+            var page = new Paginator()
             {
                 list = pageList,
                 index = index,
