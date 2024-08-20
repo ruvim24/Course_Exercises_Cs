@@ -16,7 +16,6 @@ namespace WebApplication1.Data
 
         string DbPath = "\"C:\\CsProjects\\DB\\WebAplicationDb.db\"";
 
-        //string DbPath = "Data Source=\"C:\\CsProjects\\DB\\WebAplicationDb.db\";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite($"Data Source={DbPath}");
